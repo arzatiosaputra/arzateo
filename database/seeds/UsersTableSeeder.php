@@ -14,7 +14,7 @@ class UsersTableSeeder extends Seeder
     {
         // gudang
         $gudang = factory(User::class)->create([
-            'name'     => 'arza',
+            'name'     => 'arza', //gudang
             'email'    => 'arza@persediaan.com',
             'email_verified_at' => now(),
             'password' => bcrypt('persediaan'),
@@ -29,7 +29,7 @@ class UsersTableSeeder extends Seeder
 
         // pimpinan
         $pimpinan = factory(User::class)->create([
-            'name'     => 'tio',
+            'name'     => 'tio', //admin
             'email'    => 'tio@persediaan.com',
             'email_verified_at' => now(),
             'password' => bcrypt('persediaan'),
@@ -44,7 +44,7 @@ class UsersTableSeeder extends Seeder
 
         // customer
         $customer = factory(User::class)->create([
-            'name'     => 'saputra',
+            'name'     => 'saputra', //user
             'email'    => 'saputra@persediaan.com',
             'email_verified_at' => now(),
             'password' => bcrypt('persediaan'),

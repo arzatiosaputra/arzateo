@@ -37,23 +37,23 @@ class MasterbarangController extends Controller
                 'quantity'      => $request->quantity,
             ]);
 
-        return redirect()->back();
+            return redirect()->back();
 
-    }
-    public function edit($id)
-    {
-        $permintaan = Barang::findOrFaill($id);
+        }
+        public function edit($id)
+        {
+            $permintaan = Barang::findOrFaill($id);
 
-        return view('masterbarang.edit', compact('permintaan'));
-    }
-    public function show($id)
-    {
-        $data = [
-            'categorys' => Category::findOrFail($id),
-            'brands'    => Brand::get(),
-            'satuans'   => Satuan::get(),
-        ];
+            return view('masterbarang.edit', compact('permintaan'));
+        }
+        public function show($id)
+        {
+            $data = [
+                'categorys' => Category::findOrFail($id),
+                'brands'    => Brand::get(),
+                'satuans'   => Satuan::get(),
+            ];
 
-        return view('masterbarang.create',$data);
+            return view('masterbarang.create',$data);
+        }
     }
-}
