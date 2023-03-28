@@ -10,14 +10,7 @@ class Permintaan extends Model
     use AutoNumberTrait;
 
     protected $table = 'permintaans';
-    protected $fillable = [
-        'barang_id',
-        'jumlah',
-        'status'
-    ];
-    protected $guarded = [
-        'id'
-    ];
+    protected $guarded = [];
 
     public function getAutoNumberOptions()
     {
